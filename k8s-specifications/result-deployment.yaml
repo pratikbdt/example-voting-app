@@ -15,8 +15,10 @@ spec:
         app: result
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_result
+      - image: jfrogbdt.jfrog.io/demo-result-docker/demoresult:1
         name: result
         ports:
         - containerPort: 80
           name: result
+      imagePullSecrets:
+      - name: demo-vote
